@@ -2,13 +2,13 @@
 
 n = 600851475143    
 
-list = []
+list = [] 
 
 i = 2
-while i <= n:
+while i <= n: #Adım 1 : n sayısını çarpanlarına ayırmalıyız. 
     while n % i == 0:
-        n = n / i
-        for j in range(2,i):
+        n = n / i #Adım 2 : sayı çok büyük bu yüzden sürekli çarpanlarına bölerek sayıyı küçültüp deneme sayımızı azaltmalıyız.
+        for j in range(2,i): #Adım 3 : çarpanların asallığını kontrol edip listeye ekleyelim
             if i % j ==0:
                 break
         else:
@@ -16,7 +16,7 @@ while i <= n:
 
     i += 1
 
-print(max(list))
+print(max(list)) #Adım 4 : listeden en büyük asal çarpanı ekrana yazdıralım.
 
 
 
